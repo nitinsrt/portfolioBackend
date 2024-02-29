@@ -15,12 +15,11 @@ pipeline{
                 }
             }
         }
-        stage("Build"){
-            steps{
-                node{
-                    sh 'npm install'
-                    sh 'npm run build'
-                }
+         stage('Build') {
+            steps {
+                // Your build steps using npm
+                sh 'npm install'
+                sh 'npm run build'
             }
         }
     }
