@@ -1,5 +1,10 @@
 pipeline{
     agent any
+
+    tools{
+        nodejs NodeJS_21
+    }
+
     stages{
         stage("checkout"){
             steps{
