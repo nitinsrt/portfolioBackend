@@ -21,5 +21,10 @@ pipeline{
                 sh 'npm run build'
             }
         }
+        stage('Build Image'){
+            steps{
+                sh 'docker build -t portfolio-backend:1.0 .'
+            }
+        }
     }
 }
