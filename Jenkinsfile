@@ -23,7 +23,7 @@ pipeline{
         }
         stage('Build Image'){
             steps{
-                scripts{
+                script{
                     docker.build('portfolio-backend:1.0', '.')
                 }
             }
