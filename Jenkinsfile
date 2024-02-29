@@ -8,11 +8,7 @@ pipeline{
         }
            stage('Install Node.js and npm') {
             steps {
-                script {
-                    sh 'sudo apt update'
-                    sh 'sudo apt install -y nodejs'
-                    sh 'sudo apt install -y npm'
-                }
+                sh 'npm install'
             }
         }
          stage('Build') {
