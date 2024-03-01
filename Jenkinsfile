@@ -3,6 +3,7 @@ pipeline{
 
     tools{
         nodejs 'NodeJS_21'
+        docker 'docker'
     }
 
     stages{
