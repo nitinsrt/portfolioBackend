@@ -2,8 +2,16 @@ const express = require("express");
 const mongoose = require("mongoose");
 const config = require("./config");
 const routes = require("./routes");
+const cors = require("cors");
 
 const app = express();
+
+const corsOptions = {
+  origin: "*",
+  // other options...
+};
+
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 
